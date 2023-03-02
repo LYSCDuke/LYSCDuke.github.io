@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<title>Home Page</title>
+		<style>
+			.hide-in-phone{
+				   display:none
+				   }
+				   @media only screen and (max-width:960px) { .hide-in-phone { display: block; }}
+			.title{
+			       text-align: center;
+				   letter-spacing:10px;
+				   color: #424142;
+				   font-family:"Ailerons";
+				   font-size: 32px;
+				   margin-top: 2%;
+				   margin-bottom: 1%;
+			       }
+
+			.subtitle{
+				    text-align: center;
+				    letter-spacing:3px;
+				    color: #424142;				 
+			        font-family:"Open Sans";
+				    font-size: 20px;
+                   }
+
+			.container{
+				  display: grid;
+				  grid-template-columns: repeat(3,Auto);
+				  justify-content: center;
+				  align-items:center;	
+				  }
+
+			footer{
+				  display: flex;
+				  width: calc(317px * 3);
+				  background: #424142;
+				  height: 45px;
+				  flex-direction: row;
+				  justify-content: center;
+				  align-items:center;
+				  margin-left: auto;
+				  margin-right: auto;
+				  }
+
+			.container{color: white;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 13px;
+				  }
+
+			.flex_container{
+				  width: 100%;
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+			      }	
+
+			.Portfoilo_img{
+				   text-align: center;
+				   letter-spacing:10px;
+				   color: #424142;
+				   font-family:"Ailerons";
+				   font-size: 32px;
+				   margin-top: 2%;
+				   margin-bottom: 1%;
+			       }
+
+			.Portfoilo_img>a>img{
+				   width:310px;
+			       } 
+
+			.PORTFOLIO {color: #D2B599;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 13px;
+				  }
+
+			 .About {color: white;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 13px;
+				  }
+
+			 .Contact {color: white;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 13px;
+				  }
+
+			.Portfolio_Mobile {color: #D2B599;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 16px;
+				  }
+
+			.About_Mobile {color: white;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 16px;
+				  }
+
+			.Contact_Mobile {color: white;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 16px;
+				  }	  
+
+			  a {text-decoration:none;}
+			  a:link{color:#FFFFFF;}      /* 未存取連結*/
+              a:visited {color:#FFFFFF;}  /* 已存取連結 */
+              a:hover {color:#D2B599;}  /* 滑鼠移動到連結上 */
+              a:active {color:#424142;}  /* 滑鼠點 選時 */
+        
+			 @media screen and (max-width:960px){
+			.Portfoilo_img>a>img{	
+                   width: 100%;
+				   text-align: center;
+			       }
+				   .container{ 
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				  flex-direction: column;
+				  text-align: center;
+				  }
+            footer{
+				   display: none;
+			       }	   
+			}  
+	
+</style>
+	</head>
+
+	<body>
+		<div class="big_box">
+			
+		<div class="hide-in-phone">
+			<nav class="w3-sidenav" style="display:none;background-color: #424142;">
+                
+
+
+				<a href="javascript:void(0)" 
+				onclick="w3_close()"
+				class="w3-closenav w3-large"> &times;</a>
+				<p class="Portfolio_Mobile">
+					<a href="../v2/Home Page.html">Portfoilo</a></p>
+				<p class="About_Mobile">
+					<a href="/Users/lawrence/Documents/Lawrence/Lawrence Porfolio/v2/About.html">ABOUT</a></p>
+
+				<p class="Contact_Mobile">
+					<a href="/Users/lawrence/Documents/Lawrence/Lawrence Porfolio/v2/Contact.html">Contact</a></p>
+
+			  </nav>
+
+			  <header class="w3-container">
+				<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>    
+			</header>
+		</div> 	
+
+			<h1 class="title">Lawrnce</h1>
+			<p class="subtitle">DESIGN PORTFOLIO</p>
+
+			<div class="flex_container">
+				<div class="container">
+					<div class="Portfoilo_img">
+						<a href="../v2/SungSung_Project Page.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-05.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="RE：BOX_Project Page.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-03.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="HikingHK.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-01.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="Mr Boradband.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-14.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="Type ClassificationM.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-11.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="Enchanted Rose.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-08.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="Exhausted.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-23.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="Art Deco.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-17.jpg" />
+						</a>
+					</div>
+					<div class="Portfoilo_img">
+						<a href="Hide Hakka AR Thankyou card.html">
+							<img src="../OnlinePortfoilo/Online Portfolio-20.jpg" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p class="PORTFOLIO">PORTFOLIO</p>
+			<p class="About"><a href="About.html">ABOUT</a></p>
+			<p class="Contact"><a href="Contact.html">CONTACT</a></p>
+
+	<script>
+		function w3_open() {
+			document.getElementsByClassName("w3-sidenav")[0].style.width = "35%";
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+				}
+			function w3_close() {
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+				}
+				</script>
+			</div>
+		</footer>
+	</body>
+</html>

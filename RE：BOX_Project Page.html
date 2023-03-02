@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<title>RE:BOX Project</title>
+		<style>
+              .hide-in-phone{
+				   display:none
+				   }
+				   @media only screen and (max-width:960px) { .hide-in-phone { display: block; }}
+
+              .container{
+				  display: grid;
+				  grid-template-columns: repeat(2,Auto);
+				  justify-content: center;
+				  align-items:center;	
+				  }
+			  .title{
+			       text-align: center;
+				   letter-spacing:10px;
+				   color: #424142;
+				   font-family:"Ailerons";
+				   font-size: 32px;
+				   margin-top: 2%;
+				   margin-bottom: 1%;
+			       }
+			  .p1{
+				  text-align: center;
+				  letter-spacing:5px;
+				  color:#424142;				 
+			      font-family:"Open Sans";
+				  font-size: 20px;
+				  
+			      }
+		      .p2{
+				  text-align: left;
+				  color:#424142;
+				  font-family:DIN;
+				  font-size: 16px;
+				  height:calc(1950px/2);
+				  font-weight: 400;
+				  }
+			  footer{
+				  display: flex;
+				  width: calc(317px * 3);
+				  background:#424142;
+				  height: 45px;
+				  flex-direction: row;
+				  justify-content: center;
+				  align-items:center;
+				  margin-left: auto;
+				  margin-right: auto;
+				  }
+              .PORTFOLIO {color: white;
+   			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 13px;
+				  }
+			  .About {color: #D2B599;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 13px;
+				  }
+			  .Contact {color: white;
+			      margin: 0 25px;
+				  font-family:"Open Sans";
+				  font-weight: 600;
+				  font-size: 13px;
+				  }
+			  .item{margin: 5px;
+				  justify-content: center;
+				  align-items: center;
+                  }
+			  .item > a > img{
+				  width:310px;
+				  display: flex;
+                  justify-content: center;
+                  align-items: center;
+			      }
+			  a {text-decoration:none;}
+			  a:link{color:#FFFFFF;}      /* 未存取連結*/
+              a:visited {color:#FFFFFF;}  /* 已存取連結 */
+              a:hover {color:#D2B599;}  /* 滑鼠移動到連結上 */
+              a:active {color:#424142;}  /* 滑鼠點 選時 */
+		      .item{margin: 10px;
+				  }
+			  .item > img{
+				  width:80%;
+				  max-width: 620px;
+				 }
+	          .item > video{
+				  width:80%;
+				  max-width:calc(932px/2);
+				  }
+		 .button {
+                  border: none;
+                  color: white;
+                  padding: 5px 5px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 15px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+			      background: #424142;
+				  width:100px;
+			      font-family:"Open Sans";
+		 }
+		 /* The Modal (background) */
+		.modal {
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Sit on top */
+			padding-top: 100px;
+			/* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			height: 100%;
+			/* Full height */
+			overflow: auto;
+			/* Enable scroll if needed */
+			background-color: rgb(255, 255, 255);
+			/* Fallback color */
+			background-color: rgba(255, 255, 255);
+			/* Black w/ opacity */
+		}
+
+		/* Modal Content (image) */
+		.modal-content {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+		}
+
+		/* Caption of Modal Image */
+		#caption {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+			text-align: center;
+			color: #ccc;
+			padding: 10px 0;
+			height: 150px;
+		}
+
+		/* Add Animation */
+		.modal-content,
+		#caption {
+			-webkit-animation-name: zoom;
+			-webkit-animation-duration: 0.6s;
+			animation-name: zoom;
+			animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+			from {
+				-webkit-transform: scale(0)
+			}
+
+			to {
+				-webkit-transform: scale(1)
+			}
+		}
+
+		@keyframes zoom {
+			from {
+				transform: scale(0)
+			}
+
+			to {
+				transform: scale(1)
+			}
+		}
+
+		/* The Close Button */
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 35px;
+			color: #424142;
+			font-size: 40px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		/* 100% Image Width on Smaller Screens */
+        @media screen and (max-width:960px){
+			.Portfoilo_img>a>img{	
+                   width: 100%;
+				   text-align: center;
+			       }
+				   .container{ 
+				  display: flex;
+				  flex-direction: column;
+				  /* rid-template-columns: repeat(1,auto); */
+				  justify-content: center;
+				  align-items:center;
+				
+				  justify-content: center;
+				  text-align: center;
+				  }
+            footer{
+				   display: none;
+			       }
+				   
+			.p2{
+				  flex-direction: row;
+				  color:#424142;
+				  font-family:DIN;
+				  font-size: 16px;
+				  margin: 10px;
+				  font-weight: 400;
+				  }
+
+			.container{ 
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				  flex-direction: column;
+				  text-align: center;
+				  }	  
+		}  
+		
+		 </style>
+	</head>
+
+	<body>
+
+		<div class="hide-in-phone">
+			<nav class="w3-sidenav" style="display:none;background-color: #424142;">
+                
+
+
+				<a href="javascript:void(0)" 
+				onclick="w3_close()"
+				class="w3-closenav w3-large"> &times;</a>
+				<p class="Portfolio_Mobile">
+					<a href="../v2/Home Page.html">Portfoilo</a></p>
+				<p class="About_Mobile">
+					<a href="/Users/lawrence/Documents/Lawrence/Lawrence Porfolio/v2/About.html">ABOUT</a></p>
+	
+				<p class="Contact_Mobile">
+					<a href="/Users/lawrence/Documents/Lawrence/Lawrence Porfolio/v2/Contact.html">Contact</a></p>
+	
+
+			  </nav>
+
+			  <header class="w3-container">
+				<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>    
+			</header>
+		</div> 	
+		<h1 class="title">Lawrnce</h1>
+
+		<div class="container">
+			<div class="item">
+				<img src="../OnlinePortfoilo/Online Portfolio-03.jpg" class="myImg" id="myImg"
+					/><br><br>
+				<img src="../OnlinePortfoilo/Online Portfolio-04.jpg" class="myImg" id="myImg2"
+					/><br><br>
+				<video src="/Users/lawrence/Documents/Lawrence/Lawrence Porfolio/OnlinePortfoilo/Re：Box_v5.mp4" controls muted="myImg"
+					id="myVedeo1"><br>
+			</div>
+
+			<p class="p2">
+				<h class="p1">RE:BOX Project</h>
+				<br>
+				<br>Nowadays online shopping become more popular,after delivery 
+				<br>peoplecreate some waste.<br>
+				I designed this app to help people enhance their environmental <br>
+				awareness.<br>
+				Through this app, you can earn points after you recycle the <br>
+				packing,you can use those points to redeem different discounts.</h>
+				<br><br><br><br><br><br><br>
+				<a class="button" href="javascript:;" onclick="javascript:history.back();">BACK</a>
+			</p>
+
+		</div>
+
+		<footer>
+			<p class="PORTFOLIO"><a href="../v2/Home Page.html">PORTFOLIO</a></p>
+			<p class="About"><a href="About.html">ABOUT</a></p>
+			<p class="Contact"><a href="Contact.html">CONTACT</a></p>
+		</footer>
+
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" src="" id="img-holder">
+			<div id="caption"></div>
+		</div>
+
+
+		<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById("myImg");
+		var img2 = document.getElementById("myImg2");
+		var vmyVedeo1 = document.getElementById("video-holder");
+
+		var modalImg = document.getElementById("img-holder");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = "../OnlinePortfoilo/Online Portfolio-03.jpg";
+		  captionText.innerHTML = this.alt;
+		}
+		img2.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = "../OnlinePortfoilo/Online Portfolio-04.jpg";
+		  captionText.innerHTML = this.alt;
+		}
+		myVedeo1.onclick = function(){
+		  modal.style.display = "block";
+		  vmyVedeo1.src ="/Users/lawrence/Documents/Lawrence/Lawrence Porfolio/OnlinePortfoilo/Re：Box_v5.mp4";
+		  captionText.innerHTML = this.alt;
+		}
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+		  modal.style.display = "none";
+		}
+		function w3_open() {
+			document.getElementsByClassName("w3-sidenav")[0].style.width = "35%";
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+				}
+			function w3_close() {
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+				}	
+		</script>
+	</body>
+</html>
